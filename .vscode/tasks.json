@@ -11,7 +11,7 @@
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
         },
         {
             "label": "publish",
@@ -25,8 +25,8 @@
                 "--runtime=linux-arm",
                 "--self-contained=true",
                 "-p:PublishSingleFile=true",
-                "-p:PublishTrimmed=true"
-
+                "-p:PublishTrimmed=true",
+                "--configuration=release"
             ],
             "problemMatcher": "$msCompile",
             "group": {
@@ -44,6 +44,15 @@
                 "${workspaceFolder}/iloHealthChecker.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "clean",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "clean"
             ],
             "problemMatcher": "$msCompile"
         }

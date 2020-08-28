@@ -4,5 +4,17 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="microsoft.extensions.configuration" Version="3.1.7" />
+    <PackageReference Include="microsoft.extensions.configuration.json" Version="3.1.7" />
+    <PackageReference Include="microsoft.extensions.dependencyinjection" Version="3.1.7" />
+    <PackageReference Include="microsoft.extensions.logging" Version="3.1.7" />
+    <PackageReference Include="microsoft.extensions.logging.console" Version="3.1.7" />
+  </ItemGroup>
 
 </Project>
