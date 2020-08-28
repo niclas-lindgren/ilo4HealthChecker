@@ -360,3 +360,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+*.nuget.cache
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
