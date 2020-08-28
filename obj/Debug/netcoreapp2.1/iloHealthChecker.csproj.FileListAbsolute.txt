@@ -1,0 +1,11 @@
+C:\Users\nicla\projects\iloHealthChecker\bin\Debug\netcoreapp2.1\iloHealthChecker.deps.json
+C:\Users\nicla\projects\iloHealthChecker\bin\Debug\netcoreapp2.1\iloHealthChecker.runtimeconfig.json
+C:\Users\nicla\projects\iloHealthChecker\bin\Debug\netcoreapp2.1\iloHealthChecker.runtimeconfig.dev.json
+C:\Users\nicla\projects\iloHealthChecker\bin\Debug\netcoreapp2.1\iloHealthChecker.dll
+C:\Users\nicla\projects\iloHealthChecker\bin\Debug\netcoreapp2.1\iloHealthChecker.pdb
+C:\Users\nicla\projects\iloHealthChecker\obj\Debug\netcoreapp2.1\iloHealthChecker.csprojAssemblyReference.cache
+C:\Users\nicla\projects\iloHealthChecker\obj\Debug\netcoreapp2.1\iloHealthChecker.csproj.CoreCompileInputs.cache
+C:\Users\nicla\projects\iloHealthChecker\obj\Debug\netcoreapp2.1\iloHealthChecker.AssemblyInfoInputs.cache
+C:\Users\nicla\projects\iloHealthChecker\obj\Debug\netcoreapp2.1\iloHealthChecker.AssemblyInfo.cs
+C:\Users\nicla\projects\iloHealthChecker\obj\Debug\netcoreapp2.1\iloHealthChecker.dll
+C:\Users\nicla\projects\iloHealthChecker\obj\Debug\netcoreapp2.1\iloHealthChecker.pdb
