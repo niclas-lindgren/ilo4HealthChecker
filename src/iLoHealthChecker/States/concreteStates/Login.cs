@@ -2,13 +2,15 @@ using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using iloHealthChecker.Contracts;
-using Newtonsoft.Json;
+
 using iloHealthChecker.Configurations;
+using iloHealthChecker.Contracts;
+
+using Newtonsoft.Json;
 
 namespace iloHealthChecker.States.concreteStates
 {
-    class Login : State
+    public class Login : State
     {
         private readonly string url;
         private readonly string loginRequest;

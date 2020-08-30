@@ -1,8 +1,6 @@
-using MimeKit;
-
 namespace iloHealthChecker.Contracts
 {
-    class Smtp
+    public class Smtp
     {
         public readonly string mailserver;
         public readonly int mailport;

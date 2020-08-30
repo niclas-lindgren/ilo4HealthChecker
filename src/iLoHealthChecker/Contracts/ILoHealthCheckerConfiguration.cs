@@ -2,8 +2,8 @@ using System.Runtime.Serialization;
 
 namespace iloHealthChecker.Contracts
 {
-    [DataContract]
-    class ILoHealthCheckerConfiguration
+
+    public class ILoHealthCheckerConfiguration
     {
         public readonly LoginDetails loginDetails;
         public readonly Smtp smtp;

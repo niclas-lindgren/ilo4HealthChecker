@@ -1,11 +1,13 @@
 
 using System.IO;
+
 using iloHealthChecker.Contracts;
+
 using Newtonsoft.Json;
 
 namespace iloHealthChecker.Configurations
 {
-    sealed class ServerConfiguration
+   public sealed class ServerConfiguration
     {
         private static ServerConfiguration serverConfiguration = null;
         public readonly ILoHealthCheckerConfiguration configuration;

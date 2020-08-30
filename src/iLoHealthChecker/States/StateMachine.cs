@@ -1,12 +1,14 @@
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+
 using iloHealthChecker.Configurations;
+
 using Microsoft.Extensions.Configuration;
 
 namespace iloHealthChecker.States
 {
-    class StateMachine
+    public class StateMachine
     {
         private State _state = null;
         public readonly IConfiguration configuration;

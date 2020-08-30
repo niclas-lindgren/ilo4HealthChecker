@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace iloHealthChecker.States.concreteStates
 {
-    class Completed : State
+    public class Completed : State
     {
         public override Task Handle()
         {

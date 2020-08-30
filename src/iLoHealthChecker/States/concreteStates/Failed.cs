@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace iloHealthChecker.States.concreteStates
 {
-    class Failed : State
+    public class Failed : State
     {
         private protected string failMessage;
         public Failed(string message)

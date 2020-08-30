@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+
 using iloHealthChecker.Contracts;
 
 namespace iloHealthChecker.States.concreteStates
 {
 
-    class Statusassesser : State
+    public class Statusassesser : State
     {
         private HealthSummaryResponse responseObj;
 

@@ -2,12 +2,14 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+
 using iloHealthChecker.Contracts;
+
 using Newtonsoft.Json;
 
 namespace iloHealthChecker.States.concreteStates
 {
-    class StatusGatherer : State
+    public class StatusGatherer : State
     {
 
         private LoginResponse responseObj;

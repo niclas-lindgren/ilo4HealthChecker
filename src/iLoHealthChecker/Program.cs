@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
+
 using iloHealthChecker.States;
 using iloHealthChecker.States.concreteStates;
+
 using Microsoft.Extensions.Configuration;
 
 namespace iloHealthChecker

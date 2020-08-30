@@ -1,11 +1,7 @@
-using System.Runtime.Serialization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-
 namespace iloHealthChecker.Contracts
 {
 
-    class HealthSummaryResponse
+    public class HealthSummaryResponse
     {
         public readonly StatusTypes ams_Ready;
         public readonly StatusTypes battery_Status;
@@ -62,7 +58,7 @@ namespace iloHealthChecker.Contracts
         }
         public override string ToString()
         {
-          return $"<table><tr><td>temperature status</td><td>{temperature_Status == StatusTypes.OP_STATUS_OK}</td></tr></table>";
+            return $"<table><tr><td>temperature status</td><td>{temperature_Status == StatusTypes.OP_STATUS_OK}</td></tr></table>";
         }
     }
 }

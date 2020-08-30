@@ -1,13 +1,16 @@
 using System.Threading.Tasks;
+
 using iloHealthChecker.Configurations;
 using iloHealthChecker.Contracts;
+
 using MailKit.Net.Smtp;
+
 using MimeKit;
 using MimeKit.Text;
 
 namespace iloHealthChecker.States.concreteStates
 {
-    class EmailSender : State
+    public class EmailSender : State
     {
         private readonly string message;
         private SmtpClient client = new SmtpClient();

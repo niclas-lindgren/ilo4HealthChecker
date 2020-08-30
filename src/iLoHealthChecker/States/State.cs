@@ -1,11 +1,8 @@
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
-using iloHealthChecker.Configurations;
 
 namespace iloHealthChecker.States
 {
-    abstract class State
+    public abstract class State
     {
         protected StateMachine _stateMachine;
 

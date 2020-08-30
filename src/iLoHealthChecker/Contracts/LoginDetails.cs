@@ -1,11 +1,9 @@
 using System;
-using System.Runtime.Serialization;
-using Newtonsoft.Json;
 
 namespace iloHealthChecker.Contracts
 {
 
-    class LoginDetails
+    public class LoginDetails
     {
         public readonly string username;
         public readonly string password;

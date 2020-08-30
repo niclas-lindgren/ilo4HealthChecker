@@ -2,8 +2,8 @@ using System.Runtime.Serialization;
 
 namespace iloHealthChecker.Contracts
 {
-    [DataContract]
-    class LoginResponse
+    
+    public class LoginResponse
     {
         public readonly string session_Key;
         public readonly string user_Name;
