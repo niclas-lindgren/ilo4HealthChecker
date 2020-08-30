@@ -1,3 +1,6 @@
+# Summary
+Logs on to the iLo server, checks the system status and if any errors sends an email.
+
 # Installation
 1. Update the `iLoHealthCheckerConfiguration.json_TEMPLATE`
 2. Make the main program executable (from same directory) `chmod +x iloHealthChecker`
