@@ -18,19 +18,7 @@ namespace iloHealthChecker.States.concreteStates
 
         public override async Task Handle()
         {
-            var failedstatuses = new Dictionary<string, string>();
-            foreach (var status in responseObj)
-            {
-                if (!HealthSummaryResponse.okStatuses.Contains(status.Value))
-                {
-                    if (int.TryParse(status.Value, out var result) && result == 0)
-                    {
-                        continue;
-                    }
-                    failedstatuses.Add(status.Key, status.Value);
-                }
-            }
-
+            var failedstatuses = GetFailedStatuses(responseObj);
             if (failedstatuses.Count > 0)
             {
                 this._stateMachine.TransitionTo(new EmailSender(string.Join(",", failedstatuses)));
@@ -45,9 +33,21 @@ namespace iloHealthChecker.States.concreteStates
 
         }
 
-        private List<string> GetFailedStatuses()
+        private Dictionary<string, string> GetFailedStatuses(Dictionary<string, string> responseObj)
         {
-            return new List<string> { "test", "test2" };
+            var failedstatuses = new Dictionary<string, string>();
+            foreach (var status in responseObj)
+            {
+                if (!HealthSummaryResponse.okStatuses.Contains(status.Value))
+                {
+                    if (int.TryParse(status.Value, out var result) && result == 0)
+                    {
+                        continue;
+                    }
+                    failedstatuses.Add(status.Key, status.Value);
+                }
+            }
+            return failedstatuses;
         }
     }
 }
