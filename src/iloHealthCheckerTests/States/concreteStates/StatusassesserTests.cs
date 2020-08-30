@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Net.WebSockets;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using iloHealthChecker.States.concreteStates;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,14 @@ namespace iloHealthChecker.States.concreteStates.Tests
     public class StatusassesserTests
     {
         [TestMethod()]
-        public void HandleTest()
+        public async void HandleTest()
         {
-            Assert.Fail();
+            var response = new Dictionary<string, string>(){
+               {"test1", "OK"}, {"test1", "NOT_OK"}
+            };
+            var s = new Statusassesser(response);
+            await s.Handle();
+            Assert.IsNotNull(s.);
         }
     }
 }

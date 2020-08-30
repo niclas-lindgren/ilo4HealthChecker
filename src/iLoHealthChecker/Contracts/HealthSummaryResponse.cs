@@ -1,43 +1,42 @@
+using System.Collections.Generic;
 namespace iloHealthChecker.Contracts
 {
 
     public class HealthSummaryResponse
     {
-        public readonly StatusTypes ams_Ready;
-        public readonly StatusTypes battery_Status;
-        public readonly StatusTypes cpu_Status;
-        public readonly StatusTypes ext_Hlth_Status;
-        public readonly StatusTypes fans_Redundancy;
-        public readonly StatusTypes fans_Status;
-        public readonly StatusTypes hostpwr_State;
+        public readonly string ams_Ready;
+        public readonly string battery_Status;
+        public readonly string cpu_Status;
+        public readonly string ext_Hlth_Status;
+        public readonly string fans_Redundancy;
+        public readonly string fans_Status;
+        public readonly string hostpwr_State;
         public readonly int in_Post;
-        public readonly StatusTypes mem_Status;
-        public readonly StatusTypes nic_Status;
+        public readonly string mem_Status;
+        public readonly string nic_Status;
         public readonly int power_Supplies_Mismatch;
-        public readonly StatusTypes power_Supplies_Redundancy;
-        public readonly StatusTypes power_Supplies_Status;
-        public readonly StatusTypes storage_Status;
-        public readonly StatusTypes system_Health;
-        public readonly StatusTypes temperature_Status;
+        public readonly string power_Supplies_Redundancy;
+        public readonly string power_Supplies_Status;
+        public readonly string storage_Status;
+        public readonly string system_Health;
+        public readonly string temperature_Status;
 
-        public HealthSummaryResponse(
-            StatusTypes ams_ready,
-          StatusTypes battery_status,
-         StatusTypes cpu_status,
-          StatusTypes ext_hlth_status,
-          StatusTypes fans_redundancy,
-          StatusTypes fans_status,
-          StatusTypes hostpwr_state,
-            int in_post,
-          StatusTypes mem_status,
-          StatusTypes nic_status,
-            int power_supplies_mismatch,
-           StatusTypes power_supplies_redundancy,
-          StatusTypes power_supplies_status,
-          StatusTypes storage_status,
-          StatusTypes system_health,
-           StatusTypes temperature_status
-        )
+        public HealthSummaryResponse(string ams_ready,
+                                     string battery_status,
+                                     string cpu_status,
+                                     string ext_hlth_status,
+                                     string fans_redundancy,
+                                     string fans_status,
+                                     string hostpwr_state,
+                                     int in_post,
+                                     string mem_status,
+                                     string nic_status,
+                                     int power_supplies_mismatch,
+                                     string power_supplies_redundancy,
+                                     string power_supplies_status,
+                                     string storage_status,
+                                     string system_health,
+                                     string temperature_status)
         {
             ams_Ready = ams_ready;
             battery_Status = battery_status;
@@ -56,9 +55,9 @@ namespace iloHealthChecker.Contracts
             system_Health = system_health;
             temperature_Status = temperature_status;
         }
-        public override string ToString()
-        {
-            return $"<table><tr><td>temperature status</td><td>{temperature_Status == StatusTypes.OP_STATUS_OK}</td></tr></table>";
-        }
+
+        public static readonly List<string> okStatuses = new List<string>(){
+            "OP_STATUS_OK", "OP_STATUS_ABSENT", "NOT_APPLICABLE", "ON", "AMS_UNAVAILABLE"
+        };
     }
 }

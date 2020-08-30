@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -36,7 +37,7 @@ namespace iloHealthChecker.States.concreteStates
                 var response = await this._stateMachine.client.SendAsync(request);
                 response.EnsureSuccessStatusCode();
                 var responseContent = response.Content.ReadAsStringAsync().Result;
-                var responseObj = JsonConvert.DeserializeObject<HealthSummaryResponse>(responseContent);
+                var responseObj = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseContent);
                 System.Console.WriteLine("Getting status success");
                 this._stateMachine.TransitionTo(new Statusassesser(responseObj));
             }

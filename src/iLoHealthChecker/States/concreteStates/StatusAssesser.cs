@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,19 +9,31 @@ namespace iloHealthChecker.States.concreteStates
 
     public class Statusassesser : State
     {
-        private HealthSummaryResponse responseObj;
+        private Dictionary<string, string> responseObj;
 
-        public Statusassesser(HealthSummaryResponse responseObj)
+        public Statusassesser(Dictionary<string, string> responseObj)
         {
             this.responseObj = responseObj;
         }
 
         public override async Task Handle()
         {
-            var failedStatuses = GetFailedStatuses();
-            if (failedStatuses.Count > 0)
+            var failedstatuses = new Dictionary<string, string>();
+            foreach (var status in responseObj)
             {
-                this._stateMachine.TransitionTo(new EmailSender(string.Join(",", responseObj.ToString())));
+                if (!HealthSummaryResponse.okStatuses.Contains(status.Value))
+                {
+                    if (int.TryParse(status.Value, out var result) && result == 0)
+                    {
+                        continue;
+                    }
+                    failedstatuses.Add(status.Key, status.Value);
+                }
+            }
+
+            if (failedstatuses.Count > 0)
+            {
+                this._stateMachine.TransitionTo(new EmailSender(string.Join(",", failedstatuses)));
                 await this._stateMachine.Request();
             }
             else
