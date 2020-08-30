@@ -1,23 +1,20 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using System.Threading.Tasks;
+using iloHealthChecker.States;
+using iloHealthChecker.States.concreteStates;
+using Microsoft.Extensions.Configuration;
 
 namespace iloHealthChecker
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var serviceCollection = new ServiceCollection();
-            ConfigureServices(serviceCollection);
-            var serviceProvider = serviceCollection.BuildServiceProvider();
-            var logger = serviceProvider.GetService<ILogger<Program>>();
-            logger.LogCritical("Started");
-        }
-
-        private static void ConfigureServices(IServiceCollection services)
-        {
-            services.AddLogging(configure => configure.AddConsole());
+            var configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddEnvironmentVariables()
+            .Build();
+            var stateMachine = new StateMachine(configuration, new Login());
+            await stateMachine.Request();
         }
     }
 }
