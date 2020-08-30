@@ -11,7 +11,6 @@ namespace iloHealthChecker
         {
             var configuration = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .AddEnvironmentVariables()
             .Build();
             var stateMachine = new StateMachine(configuration, new Login());
             await stateMachine.Request();

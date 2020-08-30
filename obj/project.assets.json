@@ -53,18 +53,6 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.EnvironmentVariables/3.1.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.7"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
-        }
-      },
       "Microsoft.Extensions.Configuration.FileExtensions/3.1.7": {
         "type": "package",
         "dependencies": {
@@ -1261,22 +1249,6 @@
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
         "microsoft.extensions.configuration.binder.3.1.7.nupkg.sha512",
         "microsoft.extensions.configuration.binder.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.Configuration.EnvironmentVariables/3.1.7": {
-      "sha512": "oh54cY14iwmfUjZu6VYsUBBISDtq3xXShCSbsLy+8qBMk+LLNb3PPXgdhKRdV+OSmswbioyJrJD7ROwb2V1NDw==",
-      "type": "package",
-      "path": "microsoft.extensions.configuration.environmentvariables/3.1.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
-        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.EnvironmentVariables.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml",
-        "microsoft.extensions.configuration.environmentvariables.3.1.7.nupkg.sha512",
-        "microsoft.extensions.configuration.environmentvariables.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration.FileExtensions/3.1.7": {
@@ -4042,7 +4014,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.Extensions.Configuration.Binder >= 3.1.7",
-      "Microsoft.Extensions.Configuration.EnvironmentVariables >= 3.1.7",
       "mailkit >= 2.8.0",
       "microsoft.extensions.configuration >= 3.1.7",
       "microsoft.extensions.configuration.json >= 3.1.7",
@@ -4092,10 +4063,6 @@
       "netcoreapp3.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Binder": {
-            "target": "Package",
-            "version": "[3.1.7, )"
-          },
-          "Microsoft.Extensions.Configuration.EnvironmentVariables": {
             "target": "Package",
             "version": "[3.1.7, )"
           },

@@ -13,7 +13,6 @@
     <PackageReference Include="mailkit" Version="2.8.0" />
     <PackageReference Include="microsoft.extensions.configuration" Version="3.1.7" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.7" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.7" />
     <PackageReference Include="microsoft.extensions.configuration.json" Version="3.1.7" />
     <PackageReference Include="microsoft.extensions.dependencyinjection" Version="3.1.7" />
     <PackageReference Include="microsoft.extensions.logging" Version="3.1.7" />
