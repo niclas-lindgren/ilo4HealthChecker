@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/iloHealthChecker.csproj",
+                "${workspaceFolder}/src/iloHealthChecker/iloHealthChecker.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -28,7 +28,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/iloHealthChecker.csproj",
+                "${workspaceFolder}/src/iloHealthChecker/iloHealthChecker.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
                 "--runtime=linux-arm",
@@ -50,7 +50,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/iloHealthChecker.csproj",
+                "${workspaceFolder}/src/iloHealthChecker/iloHealthChecker.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
