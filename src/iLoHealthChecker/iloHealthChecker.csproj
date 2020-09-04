@@ -22,9 +22,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Remove="iLoHealthCheckerConfiguration.json" />
-    <Content Include="iLoHealthCheckerConfiguration.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Remove="appSettings.json" />
     <Content Include="appSettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
