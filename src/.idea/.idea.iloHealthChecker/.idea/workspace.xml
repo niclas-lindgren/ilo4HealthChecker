@@ -22,25 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba373800-815a-4ec6-a874-9f64064a2e26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iLoHealthChecker/Logging/Runner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iLoHealthChecker/nlog.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Failed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Failed.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/appSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/iloHealthChecker.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/iloHealthChecker.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iloHealthCheckerTests/States/concreteStates/StatusassesserTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iloHealthCheckerTests/States/concreteStates/StatusAssesserTests.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ba373800-815a-4ec6-a874-9f64064a2e26" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,8 +39,8 @@
         <option value="$PROJECT_DIR$/iLoHealthChecker/nlog.config" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/Program.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/States/StateMachine.cs" />
-        <option value="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Failed.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Login.cs" />
+        <option value="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Failed.cs" />
       </list>
     </option>
   </component>
@@ -103,8 +85,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599221265651</updated>
-      <workItem from="1599221271498" duration="3059000" />
+      <workItem from="1599221271498" duration="3790000" />
     </task>
+    <task id="LOCAL-00001" summary="minor cleanup, adding nlog">
+      <created>1599224437387</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599224437387</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,27 +110,33 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="minor cleanup, adding nlog" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor cleanup, adding nlog" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1874" height="425" key="GridCell.Tab.0.bottom" timestamp="1599224295914">
+    <state width="1874" height="425" key="GridCell.Tab.0.bottom" timestamp="1599228670621">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599224295914" />
-    <state width="1874" height="425" key="GridCell.Tab.0.center" timestamp="1599224295914">
+    <state width="1874" height="425" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228670621" />
+    <state width="1874" height="425" key="GridCell.Tab.0.center" timestamp="1599228670621">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599224295914" />
-    <state width="1874" height="425" key="GridCell.Tab.0.left" timestamp="1599224295914">
+    <state width="1874" height="425" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228670621" />
+    <state width="1874" height="425" key="GridCell.Tab.0.left" timestamp="1599228670621">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599224295914" />
-    <state width="1874" height="425" key="GridCell.Tab.0.right" timestamp="1599224295914">
+    <state width="1874" height="425" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228670621" />
+    <state width="1874" height="425" key="GridCell.Tab.0.right" timestamp="1599228670621">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599224295914" />
+    <state width="1874" height="425" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228670621" />
     <state x="4527" y="231" width="535" height="625" key="RollbackChangesDialog" timestamp="1599224222648">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
     <state x="4527" y="231" width="535" height="625" key="RollbackChangesDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599224222648" />
+    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599224438862">
+      <screen x="3840" y="0" width="1920" height="1080" />
+    </state>
+    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599224438862" />
   </component>
 </project>
