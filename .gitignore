@@ -366,3 +366,4 @@ FodyWeavers.xsd
 *.csproj.nuget.g.targets
 
 iLoHealthCheckerConfiguration.json
+.idea
