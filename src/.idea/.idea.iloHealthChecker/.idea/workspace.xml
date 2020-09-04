@@ -22,7 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba373800-815a-4ec6-a874-9f64064a2e26" name="Default Changelist" comment="" />
+    <list default="true" id="ba373800-815a-4ec6-a874-9f64064a2e26" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/nlog.config" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/nlog.config" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,11 +38,11 @@
       <list>
         <option value="$PROJECT_DIR$/iLoHealthChecker/Logging/Runner.cs" />
         <option value="$PROJECT_DIR$/iloHealthCheckerTests/States/concreteStates/StatusAssesserTests.cs" />
-        <option value="$PROJECT_DIR$/iLoHealthChecker/nlog.config" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/Program.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/States/StateMachine.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Login.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Failed.cs" />
+        <option value="$PROJECT_DIR$/iLoHealthChecker/nlog.config" />
       </list>
     </option>
   </component>
@@ -85,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599221265651</updated>
-      <workItem from="1599221271498" duration="3790000" />
+      <workItem from="1599221271498" duration="4199000" />
     </task>
     <task id="LOCAL-00001" summary="minor cleanup, adding nlog">
       <created>1599224437387</created>
@@ -94,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599224437387</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added copy to outputdirectory for config files">
+      <created>1599228948742</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599228948742</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,32 +120,33 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="minor cleanup, adding nlog" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor cleanup, adding nlog" />
+    <MESSAGE value="added copy to outputdirectory for config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added copy to outputdirectory for config files" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1874" height="425" key="GridCell.Tab.0.bottom" timestamp="1599228670621">
+    <state width="1874" height="425" key="GridCell.Tab.0.bottom" timestamp="1599228890177">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228670621" />
-    <state width="1874" height="425" key="GridCell.Tab.0.center" timestamp="1599228670621">
+    <state width="1874" height="425" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228890177" />
+    <state width="1874" height="425" key="GridCell.Tab.0.center" timestamp="1599228890177">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228670621" />
-    <state width="1874" height="425" key="GridCell.Tab.0.left" timestamp="1599228670621">
+    <state width="1874" height="425" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228890177" />
+    <state width="1874" height="425" key="GridCell.Tab.0.left" timestamp="1599228890176">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228670621" />
-    <state width="1874" height="425" key="GridCell.Tab.0.right" timestamp="1599228670621">
+    <state width="1874" height="425" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228890176" />
+    <state width="1874" height="425" key="GridCell.Tab.0.right" timestamp="1599228890177">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228670621" />
+    <state width="1874" height="425" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228890177" />
     <state x="4527" y="231" width="535" height="625" key="RollbackChangesDialog" timestamp="1599224222648">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
     <state x="4527" y="231" width="535" height="625" key="RollbackChangesDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599224222648" />
-    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599224438862">
+    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599228950448">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599224438862" />
+    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599228950448" />
   </component>
 </project>
