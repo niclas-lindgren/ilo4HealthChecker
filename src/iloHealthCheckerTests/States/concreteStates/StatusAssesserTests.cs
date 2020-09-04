@@ -8,7 +8,7 @@ using System.Text;
 namespace iloHealthChecker.States.concreteStates.Tests
 {
     [TestClass()]
-    public class StatusassesserTests
+    public class StatusAssesserTests
     {
         [TestMethod()]
         public async void HandleTest()
@@ -18,7 +18,7 @@ namespace iloHealthChecker.States.concreteStates.Tests
             };
             var s = new Statusassesser(response);
             await s.Handle();
-            Assert.IsNotNull(s.);
+            Assert.IsNotNull(s);
         }
     }
 }

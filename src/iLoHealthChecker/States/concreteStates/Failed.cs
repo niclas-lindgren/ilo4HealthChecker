@@ -1,17 +1,25 @@
+using System;
 using System.Threading.Tasks;
+using NLog;
 
 namespace iloHealthChecker.States.concreteStates
 {
     public class Failed : State
     {
-        private protected string failMessage;
+        private readonly Logger _log;
+        private readonly string _failMessage;
         public Failed(string message)
         {
-            this.failMessage = message;
+            _log = LogManager.GetCurrentClassLogger();
+            _failMessage = message;
         }
         public override Task Handle()
         {
-            return Task.Run(() => { System.Console.WriteLine($"Task failed with message [{failMessage}]"); });
+            return Task.Run(() =>
+            {
+                _log.Error($"Task failed with message [{_failMessage}]");
+                Environment.ExitCode = -1;
+            });
         }
     }
 }

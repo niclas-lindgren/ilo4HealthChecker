@@ -5,7 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <None Update="appsettings.json">
+    <None Update="appSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="iLoHealthCheckerConfiguration.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -13,11 +16,13 @@
     <PackageReference Include="mailkit" Version="2.8.0" />
     <PackageReference Include="microsoft.extensions.configuration" Version="3.1.7" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.7" />
     <PackageReference Include="microsoft.extensions.configuration.json" Version="3.1.7" />
     <PackageReference Include="microsoft.extensions.dependencyinjection" Version="3.1.7" />
     <PackageReference Include="microsoft.extensions.logging" Version="3.1.7" />
     <PackageReference Include="microsoft.extensions.logging.console" Version="3.1.7" />
     <PackageReference Include="newtonsoft.json" Version="12.0.3" />
+    <PackageReference Include="nlog.extensions.logging" Version="1.6.5" />
   </ItemGroup>
 
 </Project>

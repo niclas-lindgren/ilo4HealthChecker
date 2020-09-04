@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_iloHealthChecker.-216202745.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.0/build/_common/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.0/build/_common/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.0/build/netcoreapp1.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="iLoHealthChecker" t="IncludeRecursive">
+        <e p="Configurations" t="Include">
+          <e p="ServerConfiguration.cs" t="Include" />
+        </e>
+        <e p="Constants.cs" t="Include" />
+        <e p="Contracts" t="Include">
+          <e p="HealthSummaryResponse.cs" t="Include" />
+          <e p="ILoHealthCheckerConfiguration.cs" t="Include" />
+          <e p="LoginDetails.cs" t="Include" />
+          <e p="LoginRequest.cs" t="Include" />
+          <e p="LoginResponse.cs" t="Include" />
+          <e p="Smtp.cs" t="Include" />
+          <e p="StatusTypes.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="EnvironmentVariableException.cs" t="Include" />
+        </e>
+        <e p="Logging" t="Include">
+          <e p="Runner.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="States" t="Include">
+          <e p="State.cs" t="Include" />
+          <e p="StateMachine.cs" t="Include" />
+          <e p="concreteStates" t="Include">
+            <e p="Completed.cs" t="Include" />
+            <e p="EmailSender.cs" t="Include" />
+            <e p="Failed.cs" t="Include" />
+            <e p="Login.cs" t="Include" />
+            <e p="StatusAssesser.cs" t="Include" />
+            <e p="StatusGatherer.cs" t="Include" />
+          </e>
+        </e>
+        <e p="appSettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="iLoHealthCheckerConfiguration.json" t="Include" />
+        <e p="iloHealthChecker.csproj" t="IncludeRecursive" />
+        <e p="nlog.config" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="iloHealthChecker.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="iloHealthChecker.sln" t="IncludeFlat" />
+      <e p="iloHealthCheckerTests" t="IncludeRecursive">
+        <e p="States" t="Include">
+          <e p="concreteStates" t="Include">
+            <e p="CompletedTests.cs" t="Include" />
+            <e p="EmailSenderTests.cs" t="Include" />
+            <e p="FailedTests.cs" t="Include" />
+            <e p="LoginTests.cs" t="Include" />
+            <e p="StatusAssesserTests.cs" t="Include" />
+            <e p="StatusGathererTests.cs" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="iloHealthCheckerTests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="iloHealthCheckerTests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

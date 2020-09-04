@@ -11,10 +11,7 @@ namespace iloHealthChecker
     {
         static async Task Main(string[] args)
         {
-            var configuration = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .Build();
-            var stateMachine = new StateMachine(configuration, new Login());
+            var stateMachine = new StateMachine(new Login());
             await stateMachine.Request();
         }
     }
