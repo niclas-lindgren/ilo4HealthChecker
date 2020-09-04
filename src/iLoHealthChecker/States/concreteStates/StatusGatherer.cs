@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using iloHealthChecker.Contracts;
 using Newtonsoft.Json;
 using NLog;
 
@@ -13,7 +12,7 @@ namespace iloHealthChecker.States.concreteStates
     {
         private readonly Logger _log;
 
-        public StatusGatherer(LoginResponse responseObj)
+        public StatusGatherer()
         {
             _log = LogManager.GetCurrentClassLogger();
         }

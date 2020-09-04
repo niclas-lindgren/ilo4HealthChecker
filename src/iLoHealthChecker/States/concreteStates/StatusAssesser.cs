@@ -20,12 +20,11 @@ namespace iloHealthChecker.States.concreteStates
 
         public override async Task Handle()
         {
-            _log.Info($"Statuses {string.Join(Environment.NewLine, _responseObj)}");
+            _log.Info($"Statuses: {Environment.NewLine + string.Join(Environment.NewLine, _responseObj)}");
             var failedstatuses = GetFailedStatuses(_responseObj);
-            _log.Info($"Failed statuses {string.Join(Environment.NewLine, failedstatuses)}");
             if (failedstatuses.Count > 0)
             {
-                _log.Warn("Failed statuses");
+                _log.Warn($"Failed statuses {string.Join(Environment.NewLine, failedstatuses)}");
                 _stateMachine.TransitionTo(new EmailSender(string.Join(",", failedstatuses)));
                 await _stateMachine.Request();
             }

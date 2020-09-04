@@ -71,8 +71,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../publish" />
   </component>
-  <component name="RunManager" selected="Publish to folder.Publish iloHealthChecker to folder (1)">
+  <component name="RunManager" selected="Publish to folder.Publish iloHealthChecker to folder (2)">
     <configuration name="Publish iloHealthChecker to folder (1)" type="DotNetFolderPublish" factoryName="Publish to folder" temporary="true">
+      <riderPublish runtime="linux-arm" self_contained="true" target_folder="$PROJECT_DIR$/../publish" target_framework="netcoreapp3.1" uuid_high="2822402788042686733" uuid_low="-8692413553767679317" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish iloHealthChecker to folder (2)" type="DotNetFolderPublish" factoryName="Publish to folder" temporary="true">
       <riderPublish runtime="linux-arm" self_contained="true" target_folder="$PROJECT_DIR$/../publish" target_framework="netcoreapp3.1" uuid_high="2822402788042686733" uuid_low="-8692413553767679317" />
       <method v="2" />
     </configuration>
@@ -100,6 +104,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Publish to folder.Publish iloHealthChecker to folder (2)" />
         <item itemvalue="Publish to folder.Publish iloHealthChecker to folder (1)" />
         <item itemvalue="Publish to folder.Publish iloHealthChecker to folder" />
       </list>

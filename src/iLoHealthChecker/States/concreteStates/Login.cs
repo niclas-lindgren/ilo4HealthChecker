@@ -38,7 +38,7 @@ namespace iloHealthChecker.States.concreteStates
                 var responseObj =
                     JsonConvert.DeserializeObject<LoginResponse>(response.Content.ReadAsStringAsync().Result);
                 _log.Info("Login success");
-                _stateMachine.TransitionTo(new StatusGatherer(responseObj));
+                _stateMachine.TransitionTo(new StatusGatherer());
             }
             catch (Exception e)
             {
