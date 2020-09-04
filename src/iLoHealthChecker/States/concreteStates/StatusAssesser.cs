@@ -1,53 +1,55 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-
 using iloHealthChecker.Contracts;
+using NLog;
 
 namespace iloHealthChecker.States.concreteStates
 {
 
-    public class Statusassesser : State
+    public class StatusAssesser : State
     {
-        private Dictionary<string, string> responseObj;
+        private readonly Dictionary<string, string> _responseObj;
+        private readonly Logger _log;
 
-        public Statusassesser(Dictionary<string, string> responseObj)
+        public StatusAssesser(Dictionary<string, string> responseObj)
         {
-            this.responseObj = responseObj;
+            _log = LogManager.GetCurrentClassLogger();
+            _responseObj = responseObj;
         }
 
         public override async Task Handle()
         {
-            var failedstatuses = GetFailedStatuses(responseObj);
+            _log.Info($"Statuses {_responseObj}");
+            var failedstatuses = GetFailedStatuses(_responseObj);
+            _log.Info($"Failed statuses {_responseObj}");
             if (failedstatuses.Count > 0)
             {
-                this._stateMachine.TransitionTo(new EmailSender(string.Join(",", failedstatuses)));
-                await this._stateMachine.Request();
+                _log.Warn("Failed statuses");
+                _stateMachine.TransitionTo(new EmailSender(string.Join(",", failedstatuses)));
+                await _stateMachine.Request();
             }
             else
             {
 
-                this._stateMachine.TransitionTo(new Completed());
-                await this._stateMachine.Request();
+                _stateMachine.TransitionTo(new Completed());
+                await _stateMachine.Request();
             }
 
         }
 
-        private Dictionary<string, string> GetFailedStatuses(Dictionary<string, string> responseObj)
+        private static Dictionary<string, string> GetFailedStatuses(Dictionary<string, string> ResponseObj)
         {
-            var failedstatuses = new Dictionary<string, string>();
-            foreach (var status in responseObj)
+            var failedStatuses = new Dictionary<string, string>();
+            foreach (var (key, value) in ResponseObj.Where(status => !HealthSummaryResponse.okStatuses.Contains(status.Value)))
             {
-                if (!HealthSummaryResponse.okStatuses.Contains(status.Value))
+                if (int.TryParse(value, out var result) && result == 0)
                 {
-                    if (int.TryParse(status.Value, out var result) && result == 0)
-                    {
-                        continue;
-                    }
-                    failedstatuses.Add(status.Key, status.Value);
+                    continue;
                 }
+                failedStatuses.Add(key, value);
             }
-            return failedstatuses;
+            return failedStatuses;
         }
     }
 }

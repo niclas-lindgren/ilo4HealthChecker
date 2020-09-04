@@ -16,7 +16,7 @@ namespace iloHealthChecker.States.concreteStates.Tests
             var response = new Dictionary<string, string>(){
                {"test1", "OK"}, {"test1", "NOT_OK"}
             };
-            var s = new Statusassesser(response);
+            var s = new StatusAssesser(response);
             await s.Handle();
             Assert.IsNotNull(s);
         }

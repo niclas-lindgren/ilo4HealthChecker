@@ -30,14 +30,14 @@ namespace iloHealthChecker.States.concreteStates
 
         public override async Task Handle()
         {
-            _log.Info($"Logging in to server at {_stateMachine.client.BaseAddress}");
+            _log.Info($"Logging in to server");
             try
             {
                 var response = await _stateMachine.client.PostAsync(_url, _stringContent);
                 response.EnsureSuccessStatusCode();
                 var responseObj =
                     JsonConvert.DeserializeObject<LoginResponse>(response.Content.ReadAsStringAsync().Result);
-                Console.WriteLine("Login success");
+                _log.Info("Login success");
                 _stateMachine.TransitionTo(new StatusGatherer(responseObj));
             }
             catch (Exception e)

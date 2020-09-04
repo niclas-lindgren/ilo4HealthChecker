@@ -39,7 +39,7 @@ namespace iloHealthChecker.States.concreteStates
                 var responseContent = response.Content.ReadAsStringAsync().Result;
                 var responseObj = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseContent);
                 System.Console.WriteLine("Getting status success");
-                this._stateMachine.TransitionTo(new Statusassesser(responseObj));
+                this._stateMachine.TransitionTo(new StatusAssesser(responseObj));
             }
             catch (Exception exception)
             {

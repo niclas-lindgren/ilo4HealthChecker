@@ -1,59 +1,62 @@
 using System.Threading.Tasks;
-
 using iloHealthChecker.Configurations;
 using iloHealthChecker.Contracts;
-
 using MailKit.Net.Smtp;
-
 using MimeKit;
 using MimeKit.Text;
+using NLog;
 
 namespace iloHealthChecker.States.concreteStates
 {
     public class EmailSender : State
     {
-        private readonly string message;
-        private SmtpClient client = new SmtpClient();
-        private Smtp smtp = ServerConfiguration.GetServerConfiguration().configuration.smtp;
+        private readonly string _message;
+        private readonly SmtpClient _client = new SmtpClient();
+        private readonly Smtp _smtp = ServerConfiguration.GetServerConfiguration().configuration.smtp;
+        private readonly Logger _log;
 
         public EmailSender(string message)
         {
-            this.message = message;
+            _message = message;
+            _log = LogManager.GetCurrentClassLogger();
         }
 
         public override async Task Handle()
         {
-            send();
-            this._stateMachine.TransitionTo(new Completed());
-            await this._stateMachine.Request();
+            Send();
+            _stateMachine.TransitionTo(new Completed());
+            await _stateMachine.Request();
 
         }
 
-        public void send()
+        private void Send()
         {
-            connect();
-
+            Connect();
             var mimeMessage = new MimeMessage();
-            mimeMessage.To.Add(new MailboxAddress(smtp.recipientName, smtp.mailTo));
-            mimeMessage.From.Add(new MailboxAddress(smtp.senderName, smtp.mailFrom));
-            mimeMessage.Subject = smtp.mailSubject;
+            mimeMessage.To.Add(new MailboxAddress(_smtp.recipientName, _smtp.mailTo));
+            mimeMessage.From.Add(new MailboxAddress(_smtp.senderName, _smtp.mailFrom));
+            mimeMessage.Subject = _smtp.mailSubject;
             mimeMessage.Body = new TextPart(TextFormat.Html)
             {
-                Text = $"<div><pre>{message}</pre></div>"
+                Text = $"<div><pre>{_message}</pre></div>"
             };
-            client.Send(mimeMessage);
-            disconnect();
+            _log.Info("Sending message");
+            _client.Send(mimeMessage);
+            Disconnect();
         }
 
-        private void connect()
+        private void Connect()
         {
-            client.Connect(smtp.mailserver, smtp.mailport);
-            client.Authenticate(smtp.username, smtp.password);
+            _log.Info("Connecting to mailserver");
+            _client.Connect(_smtp.mailserver, _smtp.mailport);
+            _client.Authenticate(_smtp.username, _smtp.password);
+            _log.Info("Connected");
         }
 
-        private void disconnect()
+        private void Disconnect()
         {
-            client.Disconnect(true);
+            _log.Info("Disconnecting from mailserver");
+            _client.Disconnect(true);
         }
     }
 }
