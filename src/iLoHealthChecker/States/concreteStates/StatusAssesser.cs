@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,7 +7,6 @@ using NLog;
 
 namespace iloHealthChecker.States.concreteStates
 {
-
     public class StatusAssesser : State
     {
         private readonly Dictionary<string, string> _responseObj;
@@ -20,9 +20,9 @@ namespace iloHealthChecker.States.concreteStates
 
         public override async Task Handle()
         {
-            _log.Info($"Statuses {_responseObj}");
+            _log.Info($"Statuses {string.Join(Environment.NewLine, _responseObj)}");
             var failedstatuses = GetFailedStatuses(_responseObj);
-            _log.Info($"Failed statuses {_responseObj}");
+            _log.Info($"Failed statuses {string.Join(Environment.NewLine, failedstatuses)}");
             if (failedstatuses.Count > 0)
             {
                 _log.Warn("Failed statuses");
@@ -31,24 +31,25 @@ namespace iloHealthChecker.States.concreteStates
             }
             else
             {
-
                 _stateMachine.TransitionTo(new Completed());
                 await _stateMachine.Request();
             }
-
         }
 
         private static Dictionary<string, string> GetFailedStatuses(Dictionary<string, string> ResponseObj)
         {
             var failedStatuses = new Dictionary<string, string>();
-            foreach (var (key, value) in ResponseObj.Where(status => !HealthSummaryResponse.okStatuses.Contains(status.Value)))
+            foreach (var (key, value) in ResponseObj.Where(status =>
+                !HealthSummaryResponse.okStatuses.Contains(status.Value)))
             {
                 if (int.TryParse(value, out var result) && result == 0)
                 {
                     continue;
                 }
+
                 failedStatuses.Add(key, value);
             }
+
             return failedStatuses;
         }
     }
