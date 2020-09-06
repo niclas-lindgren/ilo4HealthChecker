@@ -1,8 +1,9 @@
+#nullable enable
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using iloHealthChecker.Contracts;
+using iloHealthChecker.Configurations;
 using NLog;
 
 namespace iloHealthChecker.States.concreteStates
@@ -10,6 +11,10 @@ namespace iloHealthChecker.States.concreteStates
     public class StatusAssesser : State
     {
         private readonly Dictionary<string, string> _responseObj;
+
+        private readonly IList<string> _okStatuses =
+            ServerConfiguration.GetInstance().configuration.okStatuses;
+
         private readonly Logger _log;
 
         public StatusAssesser(Dictionary<string, string> responseObj)
@@ -25,23 +30,23 @@ namespace iloHealthChecker.States.concreteStates
             if (failedstatuses.Count > 0)
             {
                 _log.Warn($"Failed statuses {string.Join(Environment.NewLine, failedstatuses)}");
-                _stateMachine.TransitionTo(new EmailSender(string.Join(",", failedstatuses)));
-                await _stateMachine.Request();
+                stateMachine.TransitionTo(new EmailSender(string.Join(",", failedstatuses)));
+                await stateMachine.Request();
             }
             else
             {
-                _stateMachine.TransitionTo(new Completed());
-                await _stateMachine.Request();
+                stateMachine.TransitionTo(new Completed());
+                await stateMachine.Request();
             }
         }
 
-        private static Dictionary<string, string> GetFailedStatuses(Dictionary<string, string> ResponseObj)
+        private Dictionary<string, string> GetFailedStatuses(Dictionary<string, string> ResponseObj)
         {
             var failedStatuses = new Dictionary<string, string>();
             foreach (var (key, value) in ResponseObj.Where(status =>
-                !HealthSummaryResponse.okStatuses.Contains(status.Value)))
+                !_okStatuses.Contains(status.Value)))
             {
-                if (int.TryParse(value, out var result) && result == 0)
+                if (int.TryParse((string?) value, out var result) && result == 0)
                 {
                     continue;
                 }

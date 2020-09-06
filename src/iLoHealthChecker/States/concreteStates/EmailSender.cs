@@ -12,7 +12,7 @@ namespace iloHealthChecker.States.concreteStates
     {
         private readonly string _message;
         private readonly SmtpClient _client = new SmtpClient();
-        private readonly Smtp _smtp = ServerConfiguration.GetServerConfiguration().configuration.smtp;
+        private readonly Smtp _smtp = ServerConfiguration.GetInstance().configuration.smtp;
         private readonly Logger _log;
 
         public EmailSender(string message)
@@ -24,8 +24,8 @@ namespace iloHealthChecker.States.concreteStates
         public override async Task Handle()
         {
             Send();
-            _stateMachine.TransitionTo(new Completed());
-            await _stateMachine.Request();
+            stateMachine.TransitionTo(new Completed());
+            await stateMachine.Request();
 
         }
 

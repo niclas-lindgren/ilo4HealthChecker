@@ -16,19 +16,12 @@
         </e>
         <e p="Constants.cs" t="Include" />
         <e p="Contracts" t="Include">
-          <e p="HealthSummaryResponse.cs" t="Include" />
           <e p="ILoHealthCheckerConfiguration.cs" t="Include" />
           <e p="LoginDetails.cs" t="Include" />
           <e p="LoginRequest.cs" t="Include" />
           <e p="LoginResponse.cs" t="Include" />
+          <e p="OkStatuses.cs" t="Include" />
           <e p="Smtp.cs" t="Include" />
-          <e p="StatusTypes.cs" t="Include" />
-        </e>
-        <e p="Exceptions" t="Include">
-          <e p="EnvironmentVariableException.cs" t="Include" />
-        </e>
-        <e p="Logging" t="Include">
-          <e p="Runner.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="States" t="Include">
@@ -45,6 +38,7 @@
         </e>
         <e p="appSettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="iLoHealthCheckerConfiguration.json" t="Include" />
         <e p="iloHealthChecker.csproj" t="IncludeRecursive" />
         <e p="nlog.config" t="Include" />
         <e p="obj" t="ExcludeRecursive">

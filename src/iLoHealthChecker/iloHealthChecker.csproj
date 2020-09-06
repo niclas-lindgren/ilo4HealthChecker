@@ -22,9 +22,12 @@
     <Content Include="nlog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Remove="iLoHealthCheckerConfiguration.json" />
     <None Remove="appSettings.json" />
     <Content Include="appSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="iLoHealthCheckerConfiguration.json" />
+    <Content Include="iLoHealthCheckerConfiguration.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

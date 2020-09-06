@@ -1,15 +1,13 @@
 
 using System.IO;
-
 using iloHealthChecker.Contracts;
-
 using Newtonsoft.Json;
 
 namespace iloHealthChecker.Configurations
 {
    public sealed class ServerConfiguration
     {
-        private static ServerConfiguration serverConfiguration = null;
+        private static ServerConfiguration _serverConfiguration;
         public readonly ILoHealthCheckerConfiguration configuration;
 
         private ServerConfiguration()
@@ -17,13 +15,9 @@ namespace iloHealthChecker.Configurations
             configuration = JsonConvert.DeserializeObject<ILoHealthCheckerConfiguration>(File.ReadAllText("iLoHealthCheckerConfiguration.json"));
         }
 
-        public static ServerConfiguration GetServerConfiguration()
+        public static ServerConfiguration GetInstance()
         {
-            if (serverConfiguration == null)
-            {
-                serverConfiguration = new ServerConfiguration();
-            }
-            return serverConfiguration;
+            return _serverConfiguration ??= new ServerConfiguration();
         }
     }
 }

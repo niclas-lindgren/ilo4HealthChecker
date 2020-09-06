@@ -10,7 +10,7 @@ namespace iloHealthChecker.States
     {
         private readonly Logger _log;
         private State _state;
-        public readonly ServerConfiguration serverConfiguration;
+        public readonly ServerConfiguration serverConfiguration = ServerConfiguration.GetInstance();
 
         public readonly HttpClient client;
 
@@ -18,7 +18,6 @@ namespace iloHealthChecker.States
         {
             _log = LogManager.GetCurrentClassLogger();
             TransitionTo(state);
-            serverConfiguration = ServerConfiguration.GetServerConfiguration();
             var handler = new HttpClientHandler
             {
                 ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator,
@@ -31,7 +30,7 @@ namespace iloHealthChecker.States
         {
             _log.Info($"Transition to state [{state.GetType().Name}]");
             _state = state;
-            _state.setStateMachine(this);
+            _state.SetStateMachine(this);
         }
 
         public async Task Request()

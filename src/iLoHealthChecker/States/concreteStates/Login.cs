@@ -18,7 +18,7 @@ namespace iloHealthChecker.States.concreteStates
         public Login()
         {
             _log = LogManager.GetCurrentClassLogger();
-            var loginDetails = ServerConfiguration.GetServerConfiguration().configuration.loginDetails;
+            var loginDetails = ServerConfiguration.GetInstance().configuration.loginDetails;
             _url = "/json/login_session";
             var loginRequest = new LoginRequest(
                     "login",
@@ -33,19 +33,19 @@ namespace iloHealthChecker.States.concreteStates
             _log.Info($"Logging in to server");
             try
             {
-                var response = await _stateMachine.client.PostAsync(_url, _stringContent);
+                var response = await stateMachine.client.PostAsync(_url, _stringContent);
                 response.EnsureSuccessStatusCode();
                 var responseObj =
                     JsonConvert.DeserializeObject<LoginResponse>(response.Content.ReadAsStringAsync().Result);
                 _log.Info("Login success");
-                _stateMachine.TransitionTo(new StatusGatherer());
+                stateMachine.TransitionTo(new StatusGatherer());
             }
             catch (Exception e)
             {
-                _stateMachine.TransitionTo(new Failed(e.Message));
+                stateMachine.TransitionTo(new Failed(e.Message));
             }
 
-            await _stateMachine.Request();
+            await stateMachine.Request();
         }
 
         public object GetService(Type serviceType)

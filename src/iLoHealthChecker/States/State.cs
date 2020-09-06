@@ -1,14 +1,15 @@
 using System.Threading.Tasks;
+using iloHealthChecker.Configurations;
 
 namespace iloHealthChecker.States
 {
     public abstract class State
     {
-        protected StateMachine _stateMachine;
+        protected StateMachine stateMachine;
 
-        public void setStateMachine(StateMachine machine)
+        public void SetStateMachine(StateMachine machine)
         {
-            this._stateMachine = machine;
+            stateMachine = machine;
         }
 
         public abstract Task Handle();
