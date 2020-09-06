@@ -20,7 +20,6 @@
           <e p="LoginDetails.cs" t="Include" />
           <e p="LoginRequest.cs" t="Include" />
           <e p="LoginResponse.cs" t="Include" />
-          <e p="OkStatuses.cs" t="Include" />
           <e p="Smtp.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
