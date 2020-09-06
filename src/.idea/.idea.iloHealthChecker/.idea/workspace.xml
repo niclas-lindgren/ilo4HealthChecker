@@ -23,23 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba373800-815a-4ec6-a874-9f64064a2e26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/iLoHealthChecker/Contracts/OkStatuses.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/../README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iloHealthChecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/Configurations/ServerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/Configurations/ServerConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/Contracts/HealthSummaryResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/Contracts/ILoHealthCheckerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/Contracts/ILoHealthCheckerConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/Contracts/StatusTypes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/Exceptions/EnvironmentVariableException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/Logging/Runner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/EmailSender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/EmailSender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/StatusAssesser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/StatusAssesser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/StatusGatherer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/StatusGatherer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLoHealthChecker/iloHealthChecker.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/iLoHealthChecker/iloHealthChecker.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +51,10 @@
         <option value="$PROJECT_DIR$/iLoHealthChecker/States/StateMachine.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/States/State.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/EmailSender.cs" />
-        <option value="$PROJECT_DIR$/iLoHealthChecker/Contracts/ILoHealthCheckerConfiguration.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/Contracts/OkStatuses.cs" />
-        <option value="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/StatusAssesser.cs" />
         <option value="$PROJECT_DIR$/iLoHealthChecker/iLoHealthCheckerConfiguration.json" />
+        <option value="$PROJECT_DIR$/iLoHealthChecker/Contracts/ILoHealthCheckerConfiguration.cs" />
+        <option value="$PROJECT_DIR$/iLoHealthChecker/States/concreteStates/StatusAssesser.cs" />
       </list>
     </option>
   </component>
@@ -140,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599221265651</updated>
       <workItem from="1599221271498" duration="8000000" />
-      <workItem from="1599327235887" duration="3788000" />
+      <workItem from="1599327235887" duration="4455000" />
     </task>
     <task id="LOCAL-00001" summary="minor cleanup, adding nlog">
       <created>1599224437387</created>
@@ -212,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599246316704</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="moved ok statuses to configuration">
+      <created>1599398636966</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1599398636966</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added iLoHealthCheckerConfiguration.json to version control">
+      <created>1599398837468</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1599398837468</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,37 +236,39 @@
     <MESSAGE value="Minor changes" />
     <MESSAGE value="logging changes" />
     <MESSAGE value="log changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="log changes" />
+    <MESSAGE value="moved ok statuses to configuration" />
+    <MESSAGE value="added iLoHealthCheckerConfiguration.json to version control" />
+    <option name="LAST_COMMIT_MESSAGE" value="added iLoHealthCheckerConfiguration.json to version control" />
   </component>
   <component name="WindowStateProjectService">
     <state x="4578" y="301" width="424" height="491" key="FileChooserDialogImpl" timestamp="1599329148322">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
     <state x="4578" y="301" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599329148322" />
-    <state width="1874" height="425" key="GridCell.Tab.0.bottom" timestamp="1599398439213">
+    <state width="1874" height="425" key="GridCell.Tab.0.bottom" timestamp="1599398720056">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398439213" />
-    <state width="1874" height="425" key="GridCell.Tab.0.center" timestamp="1599398439213">
+    <state width="1874" height="425" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398720056" />
+    <state width="1874" height="425" key="GridCell.Tab.0.center" timestamp="1599398720056">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398439213" />
-    <state width="1874" height="425" key="GridCell.Tab.0.left" timestamp="1599398439213">
+    <state width="1874" height="425" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398720056" />
+    <state width="1874" height="425" key="GridCell.Tab.0.left" timestamp="1599398720056">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398439213" />
-    <state width="1874" height="425" key="GridCell.Tab.0.right" timestamp="1599398439213">
+    <state width="1874" height="425" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398720056" />
+    <state width="1874" height="425" key="GridCell.Tab.0.right" timestamp="1599398720056">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="425" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398439213" />
+    <state width="1874" height="425" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398720056" />
     <state x="4527" y="231" width="535" height="625" key="RollbackChangesDialog" timestamp="1599327559933">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
     <state x="4527" y="231" width="535" height="625" key="RollbackChangesDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599327559933" />
-    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599246318262">
+    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599398839020">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
-    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599246318262" />
+    <state x="4395" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1599398839020" />
     <state x="4417" y="279" width="765" height="522" key="find.popup" timestamp="1599328580594">
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
