@@ -2,7 +2,7 @@
 Logs on to the **iLo 4** server, checks the system status and if any errors sends an email.
 
 # Installation
-1. Update the `iLoHealthCheckerConfiguration.json_TEMPLATE`
+1. Update the `iLoHealthCheckerConfiguration.json` and copy it to the same folder as your executable.
 2. Make the main program executable (from same directory) `chmod +x iloHealthChecker`
 3. Execute it with (from same directory) `./iloHealthChecker`
 4. Optional: add cron job
