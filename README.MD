@@ -1,5 +1,5 @@
 # Summary
-Logs on to the **iLo 4** server, checks the system status and if any errors sends an email.
+Logs on to the **iLo 4** server, scrapes the system status page and if any errors sends an email.
 
 # Installation
 1. Update the `iLoHealthCheckerConfiguration.json` and copy it to the same folder as your executable.
